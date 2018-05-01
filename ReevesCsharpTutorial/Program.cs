@@ -1,15 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ReevesCsharpTutorial
+
+namespace CsharpTutorial
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
+         
+
+            DumpEnv(args);
+
+            return 0;
+        }
+
+        private static void DumpEnv(string[] someargs)
+        {
+            Console.WriteLine("Hello {0} {1}", someargs[0], someargs[1]);
+            string[] MyArgs = Environment.GetCommandLineArgs();
+
+            Console.WriteLine(string.Join(",   ", MyArgs));
         }
     }
 }
